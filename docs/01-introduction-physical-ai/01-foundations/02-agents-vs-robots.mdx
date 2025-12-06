@@ -1,0 +1,39 @@
+**File 2:** `docs/01-introduction-physical-ai/01-foundations/02-agents-vs-robots.mdx`
+
+```markdown
+---
+id: agents-vs-robots
+title: "Software Agents vs. Physical Robots"
+sidebar_label: "1.2 Agents vs. Robots"
+description: "Why real-world physics breaks standard software logic and how to handle sensor noise."
+tags: [simulation, noise, physics]
+difficulty: "Beginner"
+hardware_required: ["Python Environment"]
+---
+
+# Agents vs. Robots
+
+In software, `x = x + 1` is always true. In robotics, `move(1_meter)` is rarely exactly 1 meter.
+
+## Deterministic vs. Stochastic
+*   **Software Agents:** Live in a deterministic world (Perfect execution).
+*   **Robots:** Live in a stochastic world (Noise, slippage, sensor error).
+
+## Simulation: The Noisy Robot
+We can simulate this "real world" behavior using Gaussian noise.
+
+```python title="noisy_simulation.py"
+import random
+
+def perfect_move(distance):
+    return distance
+
+def noisy_move(distance):
+    # Adding Gaussian noise to simulate wheel slippage
+    # Mean: 0, Standard Deviation: 0.5
+    real_distance = distance + random.gauss(0, 0.5)
+    return real_distance
+
+# Run the simulation
+target = 10
+print(f"Commanded: {target}m | Actual: {noisy_move(target):.2f}m")

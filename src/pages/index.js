@@ -1,9 +1,8 @@
+// src/pages/index.js
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
@@ -19,8 +18,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/introduction-physical-ai/foundations/what-is-physical-ai">
+            Start Module 1: The Embodied Mind
           </Link>
         </div>
       </div>
@@ -33,10 +32,13 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="A hands-on textbook for Humanoid Robotics and Physical AI">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        {/* You can add a feature section here later */}
+        <div className="container padding-vert--xl text--center">
+           <h2>From Python Scripts to Real World Actions.</h2>
+        </div>
       </main>
     </Layout>
   );

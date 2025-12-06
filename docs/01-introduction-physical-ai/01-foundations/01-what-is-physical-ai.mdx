@@ -1,0 +1,38 @@
+---
+id: what-is-physical-ai
+title: "Defining Physical AI: The Embodied Mind"
+sidebar_label: "1.1 What is Physical AI?"
+description: "Understanding the convergence of Large Language Models, Computer Vision, and Actuation."
+tags: [concepts, embodiment, intro]
+difficulty: "Beginner"
+hardware_required: ["None"]
+---
+
+# Defining Physical AI
+
+Physical AI is not just "smart code." It is code that must negotiate with the chaos of the real world—gravity, friction, and inertia.
+
+## The Convergence
+Physical AI sits at the intersection of three major fields:
+1. **Computer Vision:** Seeing the world.
+2. **LLMs/VLA:** Understanding the world.
+3. **Control Theory:** Manipulating the world.
+
+## Concept: Abstract vs. Physical
+The complexity lies in the physics, not just the logic.
+
+```python title="abstract_vs_physical.py"
+# Abstract AI (The Brain)
+def ask_llm(prompt):
+    return "I picked up the apple."
+
+# Physical AI (The Body)
+def pickup_apple(coordinates):
+    inverse_kinematics = solve_ik(coordinates)
+    
+    if check_collision(inverse_kinematics):
+        # Apply 2.5 Nm of torque to joints
+        apply_torque(joints, force_nm=2.5) 
+        verify_grip_pressure(sensor_data)
+    else:
+        emergency_stop()
