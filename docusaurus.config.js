@@ -10,7 +10,7 @@ const config = {
   tagline: 'Build First, Explain Second',
   favicon: 'img/favicon.ico',
 
-  url: 'https://hackathon-book-ugcp.vercel.app',
+  https: hackathon-book-black.vercel.app/sitemap.xml,
   baseUrl: '/',
 
 
