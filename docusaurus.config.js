@@ -11,9 +11,9 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-github-username.github.io',
+  url: 'https://github.com/codewithdaniyal',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/book-physical-ai/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   organizationName: 'panaversity', // Usually your GitHub org/user name.
